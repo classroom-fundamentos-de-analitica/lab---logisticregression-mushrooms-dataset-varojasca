@@ -161,7 +161,8 @@ def pregunta_04():
     X_train, X_test, y_train, y_test = pregunta_02()
 
     # Evalúe el pipeline con los datos de entrenamiento usando la matriz de confusion.
-    cfm_train = y_train,
+    cfm_train = confusion_matrix(
+        y_true=y_train,
         y_pred=pipeline.predict(X_train),
     )
 
